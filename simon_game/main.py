@@ -21,6 +21,7 @@ while True:
   print(game_number)
   time.sleep(3)
   clear_screen()
+  
   response = input("Votre réponse : ")
   if response == game_number:
     score += 1
@@ -34,4 +35,4 @@ while True:
 
 print("Partie terminée")
 print(f"La bonne réponse était : {game_number}")
-print(f"Votre score est de {score}")
+print(f"Votre score final est de {score}")
