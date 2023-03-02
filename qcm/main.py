@@ -26,7 +26,7 @@ questions_list = [question1, question2, question3, question4]
 score = 0
 
 clear_screen()
-print("Bienvenue dans le questionnaire des capitales.")
+print("Bienvenue dans le questionnaire des capitales.\n")
 time.sleep(2)
 
 for i in questions_list:
@@ -38,7 +38,7 @@ for i in questions_list:
   print(f"(c) {i.c}")
   print(f"(d) {i.d}")
   while response != "a" or response != "b" or response != "c" or response != "d":
-    response = input("Votre réponse : ")
+    response = input("\nVotre réponse : ")
     if response == "a" or response == "b" or response == "c" or response == "d":
       break
     else:
