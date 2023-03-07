@@ -1,15 +1,36 @@
 # Premiers pas en Programmation orientée object
 
 class Personne:
-  def __init__(self, nom):
+  def __init__(self, nom:str = "", age:int = 0):
     self.nom = nom
-    print(f"Constructeur Personne {nom}")
+    self.age = age
+    if self.nom == "":
+      self.nom = self.DemanderNom()
 
   def SePresenter(self):
-    print(f"Bonjour, je m'appelle {self.nom}")
+    info_personne = f"Bonjour, je m'appelle {self.nom}"
 
-personne1 = Personne("Jean")
-# personne2 = Personne("Paul")
+    if self.age <= 0:
+      print(info_personne)
+      return
+    print(f"{info_personne}, j'ai {self.age} ans")
 
-personne1.SePresenter()
+    if self.EstMajeur():
+      print("Je suis majeur")
+    else:
+      print("Je suis mineur")
+
+  def EstMajeur(self):
+    return self.age >= 18
+  
+  def DemanderNom(self):
+    name = input("Votre nom : ")
+    return name
+
+liste_personnes = [Personne("Jean", 30), Personne("Paul", 15), Personne()]
+
+liste_personnes.append(Personne('Toto', 10))
+
+for personne in liste_personnes:
+  personne.SePresenter()
 
