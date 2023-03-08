@@ -9,12 +9,12 @@ class Personne:
         print("Bonjour, je m'appelle " + self.nom)
 
 # ---
-nbr_personnes = 4
-noms = []
+nbr_personnes = 3
+liste_noms = []
 
 for i in range(nbr_personnes):
     nom = input(f"nom de la personne {i+1} : ")
-    noms.append(Personne(nom))
+    liste_noms.append(Personne(nom))
 
-for personne in noms:
+for personne in liste_noms:
     personne.SePresenter()
